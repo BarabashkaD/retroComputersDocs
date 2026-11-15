@@ -1,0 +1,87 @@
+# SPDX-License-Identifier: BSD-3-Clause
+# SPDX-FileCopyrightText: 2026 Dmitry Veremeev (BarabashkaD), https://github.com/BarabashkaD
+# Lint: the tools' own tests, the index check, the record checker of retroICs on this repo's own
+# registries (docs/record-ids.md, docs/sources.md) and board records, with the retroICs IDs checked
+# against that checkout and the retroMachines IDs against a checkout of its branch, and the
+# privacy checker of retroICs (commit history included), both at a pinned retroICs commit.
+name: checks
+
+on:
+  pull_request:
+    branches: [main]
+  # every push (side branches too: no pull request until a side branch is ready)
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+defaults:
+  run:
+    shell: pwsh
+
+env:
+  # retroICs commit whose tools/check_records.py and tools/check_privacy.py this repo uses, and
+  # whose records the CPU, PPI, DMA and CRT citations are checked against; move it on purpose
+  RETROICS_REF: 3f176e4dbd6f8f0cb9dc0145a65df955b9742c5c
+  # retroMachines branch whose records the CLK and IE4 citations are checked against. A branch
+  # name, not a commit: retroMachines' CI pins this repo by commit (RCD_REF), and two repos of one
+  # commit each cannot name each other's commits, so this side follows the branch
+  RETROMACHINES_REF: layout-migration
+
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # the pull request head, not GitHub's synthetic merge commit
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          # sources/radio-86rk: tools/check_index.py hashes the listed files at the pinned commit
+          submodules: true
+          persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: BarabashkaD/retroICs
+          ref: ${{ env.RETROICS_REF }}
+          # under build/ (ignored), so the checks of this repo do not see it
+          path: build/retroICs
+          persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: BarabashkaD/retroMachines
+          ref: ${{ env.RETROMACHINES_REF }}
+          # under build/ (ignored), like retroICs; read for its registries only, no submodules
+          path: build/retroMachines
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.14'
+      - name: Tool tests
+        run: python -B -m unittest discover -s tools/tests -v
+      - name: Index and line ends
+        run: python -B tools/check_index.py
+      - name: Records (IDs defined once, every cited ID and source ID registered)
+        # --records computers, not .: the checkouts under build/ must not count as this repo's
+        # records; they are read only as the externals retroICs and retroMachines
+        run: python -B build/retroICs/tools/check_records.py --repo . --records computers --external retroICs=build/retroICs --external retroMachines=build/retroMachines
+      - name: Privacy (working tree and the commits of the pull request)
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          $mergeBase = git merge-base $env:BASE_SHA HEAD
+          if ($LASTEXITCODE -ne 0 -or -not $mergeBase) {
+            throw "git merge-base $env:BASE_SHA HEAD failed (exit $LASTEXITCODE)"
+          }
+          python -B build/retroICs/tools/check_privacy.py --repo . --history $mergeBase
+      - name: Privacy (working tree and every commit)
+        if: github.event_name != 'pull_request'
+        run: python -B build/retroICs/tools/check_privacy.py --repo . --all

@@ -1,0 +1,13 @@
+# Privacy allow-list, read by retroICs' tools/check_privacy.py (format in its docstring).
+# One entry per line: <kind> <pattern> # <reason>. Reviewed like code; later imports add lines.
+#
+# The agent attribution trailer of commit messages. [@] and [.] keep this file itself free of
+# email-shaped strings.
+trailer ^Co-Authored-By: Claude [A-Za-z0-9. ]+ <noreply[@]anthropic[.]com>$ # agent attribution trailer of commit messages
+#
+# Crops of scanned pages: their compressed image data gives random matches of the path and email
+# patterns (a drive letter with a backslash, an at sign between letters). Their metadata is checked
+# by tools/check_index.py instead (no EXIF, XMP, IPTC, comment or text chunk), and each stored
+# file's hash is in its index. The scans themselves live in the submodule sources/radio-86rk (not
+# scanned: a gitlink).
+path computers/*/magazines/*.png # compressed crop data: random pattern matches; metadata checked by tools/check_index.py

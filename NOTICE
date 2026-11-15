@@ -1,0 +1,27 @@
+retroComputersDocs
+Copyright (c) 2026, Dmitry Veremeev (BarabashkaD), https://github.com/BarabashkaD
+
+Contains retroComputersDocs by Dmitry Veremeev (BarabashkaD), https://github.com/BarabashkaD, BSD-3-Clause and CC BY 4.0. Credit to Dmitry Veremeev (BarabashkaD) must be kept in copies and derived works.
+
+This attribution and these licences cover the owner's files only, not the third-party documents.
+
+The owner's code (tools/, .github/) is under BSD-3-Clause (LICENSE, LICENSES/BSD-3-Clause.txt).
+The owner's docs (README.md, AGENTS.md, CHANGELOG.md, index.md, the computers' index.md and board
+records) are under CC BY 4.0 (LICENSES/CC-BY-4.0.txt).
+
+Third-party documents keep their own terms, stated per file in the computer's index.md. They are
+not relicensed by this notice.
+- computers/rk86/schematics/kiselev-1.4/KiCad/Radio-86RK-Schematic-1.4.pdf (Radio-86RK rev. 1.4,
+  "Designed by Sergey Kiselev", https://github.com/skiselev/radio-86rk; its metadata rewritten):
+  CERN-OHL-S-2.0, as the sheets state (LICENSES/CERN-OHL-S-2.0.txt).
+  computers/rk86/schematics/kiselev-1.4/netlist-extracted.txt is the owner's extraction from the
+  KiCad sheets of that design, a modified form of the design under the same licence.
+- computers/rk86/datasheets/ (a vendor data sheet, its metadata rewritten): no licence stated, see
+  the index.
+- computers/rk86/magazines/radio-1986-05/r86_*.png are crops of a page of Радио 1986 No. 5; they
+  keep the magazine's status (the owner claims no rights in them).
+
+The submodule sources/radio-86rk (the fork BarabashkaD/radio-86rk of skiselev/radio-86rk, pinned
+at c5e9cb7: the KiCad sheets, CERN-OHL-S-2.0; the notes, GPL-3.0, its LICENSE; the magazine scans,
+no licence stated) is not part of this repository's files; its files keep the terms of that
+repository and of their publishers.

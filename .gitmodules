@@ -1,0 +1,3 @@
+[submodule "sources/radio-86rk"]
+	path = sources/radio-86rk
+	url = https://github.com/BarabashkaD/radio-86rk
