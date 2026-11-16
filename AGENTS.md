@@ -18,9 +18,8 @@ checkout `../retroICs`) apply here too.
 - Not a submodule of anything. The records cite `retroICs` and `retroMachines` IDs; the record check
   takes a `retroICs` and a `retroMachines` checkout (`--external retroICs=<dir> --external
   retroMachines=<dir>`).
-- Only our own documents are stored (records, indexes, the crops and extractions we made, files we
-  changed such as a PDF with its metadata rewritten). A third-party file that is a plain copy comes
-  from a submodule under `sources/`: `sources/radio-86rk` is the fork `BarabashkaD/radio-86rk` of
+- Only our own documents are stored (records, indexes, the crops and extractions we made). A
+  third-party file found in a repository comes from a submodule under `sources/`: `sources/radio-86rk` is the fork `BarabashkaD/radio-86rk` of
   skiselev/radio-86rk, pinned at c5e9cb7 (the commit the files were copied from). Clone with
   `--recursive`, or run `git submodule update --init`; `tools/check_index.py` stops with one
   problem naming that command when the submodule is not checked out. Never edit the submodule's

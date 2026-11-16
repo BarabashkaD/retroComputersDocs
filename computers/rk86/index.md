@@ -10,7 +10,7 @@ Files that are plain copies of Sergey Kiselev's repository are not stored here: 
 the submodule `sources/radio-86rk` (the fork `BarabashkaD/radio-86rk` of skiselev/radio-86rk, pinned
 at c5e9cb7, the commit they were copied from). Their paths start with `sources/radio-86rk/` and are
 relative to the repository root; the other paths are relative to this folder (the files stored
-here: our own crops and net list, and the two PDFs whose metadata was rewritten).
+here: our own crops and net list).
 
 | ID | Home | File | SHA-256 |
 |---|---|---|---|
@@ -19,13 +19,13 @@ here: our own crops and net list, and the two PDFs whose metadata was rewritten)
 | [R86-6] | this index | `sources/radio-86rk/Documentation/Radio_Magazine-Radio-86RK/Radio_Magazine-1986-06-Insert_03-Mainboard_PCB.jpg` | 056249316830e08bb829ae5ab1ef6e0cbdde37cef6a1c3a74a5a268d2a9373cd |
 | [R87-3] | this index | `sources/radio-86rk/Documentation/Radio_Magazine-Radio-86RK/Radio_Magazine-1987-03-page-32-Games-ROM_Module.jpg` | 6159e3bdf6f84689766d017dd00d9a499650ba50af037a696512d8018008c779 |
 | [R87-5] | this index | `sources/radio-86rk/Documentation/Radio_Magazine-Radio-86RK/Radio_Magazine-1987-05-page-27-KR580VG75_Replacement.jpg` (and 2 pages, 2 inserts: Files) | 1b2c3bef6b56b227fb0ea273375e1d5f268af9720ac28507180dbe40ff3d01cc |
-| [K14] | this index | `schematics/kiselev-1.4/KiCad/Radio-86RK-Schematic-1.4.pdf` (and the net list stored here; the KiCad sheets and notes in `sources/radio-86rk/`: Files) | 060a8ff2a066b09ce5ee36ac9fdca1219530f28d5f28a2ed6275b3f7ed336ab9 |
+| [K14] | this index | `sources/radio-86rk/KiCad/Radio-86RK-Schematic-1.4.pdf` (and the KiCad sheets and notes in `sources/radio-86rk/`, the net list stored here: Files) | 2c0ffda9dd3d6f3ce728d91f4de853c6ea1021b977f8d5003953e02dc0af2e2e |
 | [2716] | this index | | 9eb3796d547e99e245885f5b3e4e42f0ef405df1038298315c87e2838ae8820a |
 | [7474] | this index | | 9349f8ace5398ec38534223f312a460f3de28f6bd1bf28d663cc01221384cbe9 |
 | [74198] | this index | | 35724f70e829c33dee48da020f08a19f2c01b9f991f49931ba4a6ea1edc5972b |
 | [ИР13] | this index | | c7f4b1d83e5d768793681f6a6cb16fa7734d1c88dbbdb40961253f54fd6c507c |
 | [ТМ2] | this index | | 30fb87e313dcb20bd5775fb998eec5f428b2266e6fbebebfbe8a30bb3bb97564 |
-| [D8224] | this index | `datasheets/Intel - 8224 - Clock Generator.pdf` | 4cb541b1fb00e2af759b6da583c47720ec90766c2cf0d73e14a5e7f18923e611 |
+| [D8224] | this index | `sources/radio-86rk/Documentation/Intel - 8224 - Clock Generator.pdf` | 93310c59e601354f9ba1de1c6f0625ba333c6e78d0145cc426be22cf1bb76b8e |
 | [ГФ24] | this index | | a01544156fb13c83d2baa1e19a2b80b8c280464209efb31d9498739a0a32b9a2 |
 | [7490] | this index | | 74feb14edf36a9cb5d819425b6baf28ea9fd9e88b04eb082a7fb228a209db7ad |
 | [ИЕ4] | this index | | 337295e99b5caaa95d20ff53c9eabda50214b04a7bf71851e266c510e7c10ab6 |
@@ -137,14 +137,14 @@ clock chips get models of their own.
 | Title | Radio-86RK, rev. 1.4: schematic (5 sheets; sheet 4/5 "CRT_Memory"), KiCad sheets, the repository notes |
 | Vendor | Sergey Kiselev ("Designed by Sergey Kiselev"; "Based on the previous work by Alexey Khudyakov and Radio magazine publications", sheet title block) |
 | Document | skiselev/radio-86rk, `KiCad/Radio-86RK*.kicad_sch`, `KiCad/Radio-86RK-Schematic-1.4.pdf`, `README.md` (the Bill of Materials, memory map, connectors), `Project_Notes.md`, `Radio-86RK_Publications.md` |
-| Edition | rev. 1.4, sheets dated 2023-12-09; the schematic PDF printed 2023-12-13 (its metadata, read before the rewrite) |
+| Edition | rev. 1.4, sheets dated 2023-12-09; the schematic PDF printed 2023-12-13 (its metadata) |
 | Pages used | sheet 1/5 (CPU, bus), sheet 4/5 "CRT_Memory"; the nets of all sheets (`netlist-extracted.txt`) |
 | Origin | github.com/skiselev/radio-86rk |
-| Copied from | skiselev/radio-86rk at c5e9cb7 (2024-01-09): the KiCad sheets (added in 97d124b, 2022-05-13; last changed in 277d8b4, 2024-01-09), the schematic PDF (277d8b4), `README.md` (c5e9cb7), `Project_Notes.md` (cfba265), `Radio-86RK_Publications.md` (3ca358d); all byte-identical before the PDF rewrite |
+| Copied from | skiselev/radio-86rk at c5e9cb7 (2024-01-09): the KiCad sheets (added in 97d124b, 2022-05-13; last changed in 277d8b4, 2024-01-09), the schematic PDF (277d8b4), `README.md` (c5e9cb7), `Project_Notes.md` (cfba265), `Radio-86RK_Publications.md` (3ca358d); all byte-identical, read from the submodule |
 | Download | https://github.com/skiselev/radio-86rk/raw/c5e9cb7/KiCad/Radio-86RK-Schematic-1.4.pdf (and the same tree for the other files) |
-| Licence | The KiCad sheets and the schematic PDF state in their title block: "Licensed under CERN-OHL-S: https://cern-ohl.web.cern.ch", "Documentation and design files: https://github.com/skiselev/radio-86rk", "Radio-86RK is an open source hardware project". CERN-OHL-S exists in version 2 only: CERN-OHL-S-2.0 (`LICENSES/CERN-OHL-S-2.0.txt`); the schematic PDF is stored here with its notices unchanged, the KiCad sheets are read from the submodule. The notes (`README.md`, `Project_Notes.md`, `Radio-86RK_Publications.md`) carry no statement of their own; the repository's `LICENSE` is the GNU GPL version 3 text (`sources/radio-86rk/LICENSE`), so they are under GPL-3.0 there; read from the submodule, not stored here |
-| SHA-256 | the schematic PDF: 060a8ff2a066b09ce5ee36ac9fdca1219530f28d5f28a2ed6275b3f7ed336ab9 (this file); 2c0ffda9dd3d6f3ce728d91f4de853c6ea1021b977f8d5003953e02dc0af2e2e (as copied, before the rewrite; the file `sources/radio-86rk/KiCad/Radio-86RK-Schematic-1.4.pdf` of the submodule). The other files are unchanged copies, in the submodule: Files |
-| File | `schematics/kiselev-1.4/KiCad/Radio-86RK-Schematic-1.4.pdf` (stored here); the KiCad sheets `sources/radio-86rk/KiCad/*.kicad_sch` and the notes `sources/radio-86rk/README.md`, `Project_Notes.md`, `Radio-86RK_Publications.md` (in the submodule): Files |
+| Licence | The KiCad sheets and the schematic PDF state in their title block: "Licensed under CERN-OHL-S: https://cern-ohl.web.cern.ch", "Documentation and design files: https://github.com/skiselev/radio-86rk", "Radio-86RK is an open source hardware project". CERN-OHL-S exists in version 2 only: CERN-OHL-S-2.0 (`LICENSES/CERN-OHL-S-2.0.txt`); the schematic PDF and the KiCad sheets are read from the submodule. The notes (`README.md`, `Project_Notes.md`, `Radio-86RK_Publications.md`) carry no statement of their own; the repository's `LICENSE` is the GNU GPL version 3 text (`sources/radio-86rk/LICENSE`), so they are under GPL-3.0 there; read from the submodule, not stored here |
+| SHA-256 | the schematic PDF: 2c0ffda9dd3d6f3ce728d91f4de853c6ea1021b977f8d5003953e02dc0af2e2e (as copied; the file of the submodule). The other files: Files |
+| File | in the submodule: the schematic PDF `sources/radio-86rk/KiCad/Radio-86RK-Schematic-1.4.pdf`, the KiCad sheets `sources/radio-86rk/KiCad/*.kicad_sch` and the notes `sources/radio-86rk/README.md`, `Project_Notes.md`, `Radio-86RK_Publications.md`: Files |
 | Derived files | `schematics/kiselev-1.4/netlist-extracted.txt` (stored here): the nets of the five KiCad sheets (`sources/radio-86rk/KiCad/*.kicad_sch`; its header's "of this folder" names the folder that held the sheets when it was made), one line per net (name, sheet labels, pins as `Ref.Pin(Name)`), extracted by the owner on 2026-11-08 (tool not recorded); a modified form of the design, so CERN-OHL-S-2.0, with a header naming the source and the change. SHA-256 as extracted (before the header and LF line ends): 4a905e147dca6b531db1766f09aa98386b978d29274fcfea6f8f4b6c38906c34 |
 
 ## [2716]
@@ -240,9 +240,9 @@ clock chips get models of their own.
 | Origin | Intel (a data book section; the PDF was made in 2000 with Adobe Acrobat) |
 | Copied from | skiselev/radio-86rk at c5e9cb7, `Documentation/Intel - 8224 - Clock Generator.pdf` (added in f44a0e3, 2022-06-14) |
 | Download | https://github.com/skiselev/radio-86rk/raw/c5e9cb7/Documentation/Intel%20-%208224%20-%20Clock%20Generator.pdf |
-| Licence | No copyright notice and no statement on reproduction on the pages checked (1, 5); the copyright of the data book it comes from is not in the file. The repository it was copied from is GPL-3.0 for its own work; a vendor document found there keeps the vendor's terms, not the GPL. Stored |
-| SHA-256 | 4cb541b1fb00e2af759b6da583c47720ec90766c2cf0d73e14a5e7f18923e611 (this file); 93310c59e601354f9ba1de1c6f0625ba333c6e78d0145cc426be22cf1bb76b8e (as copied, before the rewrite; the file `sources/radio-86rk/Documentation/Intel - 8224 - Clock Generator.pdf` of the submodule) |
-| File | `datasheets/Intel - 8224 - Clock Generator.pdf` |
+| Licence | No copyright notice and no statement on reproduction on the pages checked (1, 5); the copyright of the data book it comes from is not in the file. The repository it was copied from is GPL-3.0 for its own work; a vendor document found there keeps the vendor's terms, not the GPL. Not stored: read from the submodule |
+| SHA-256 | 93310c59e601354f9ba1de1c6f0625ba333c6e78d0145cc426be22cf1bb76b8e (as copied; the file of the submodule) |
+| File | `sources/radio-86rk/Documentation/Intel - 8224 - Clock Generator.pdf` (in the submodule) |
 
 ## [ГФ24]
 
@@ -368,15 +368,14 @@ above.
 
 | File | ID | Size | SHA-256 | Licence |
 |---|---|---|---|---|
-| `datasheets/Intel - 8224 - Clock Generator.pdf` | [D8224] | 227604 | 4cb541b1fb00e2af759b6da583c47720ec90766c2cf0d73e14a5e7f18923e611 | vendor |
 | `magazines/radio-1986-05/r86_d2.png` | [R86] (derived) | 478579 | ca79bc82698567a24f9fa568a0a2d78b728b846bca6a7f7f7e8bdcfe4791914f | a crop of the magazine page; it keeps the magazine's status (the owner claims no rights in it) |
 | `magazines/radio-1986-05/r86_d8.png` | [R86] (derived) | 582668 | c54fb563d3432520c8af5780b040f6a997b8be05fb0328fbc7f6592c2a16a3b5 | a crop of the magazine page; it keeps the magazine's status (the owner claims no rights in it) |
 | `magazines/radio-1986-05/r86_d8b.png` | [R86] (derived) | 85177 | b5eff53f7d76e99f6aeeb17d3c23c53287bb3617e6d2cc42c022799232a8c60d | a crop of the magazine page; it keeps the magazine's status (the owner claims no rights in it) |
 | `magazines/radio-1986-05/r86_full.png` | [R86] (derived) | 597463 | 20a8eaf24467caadee73f4888d6356b06bbb2b820ffe6e3a127eb9ecfa881491 | a crop of the magazine page; it keeps the magazine's status (the owner claims no rights in it) |
 | `magazines/radio-1986-05/r86_video.png` | [R86] (derived) | 676228 | 9a07cabe47f3cbd6e1fe6779dcfe1a5adc4cf0c58d60d51d253a1d43917760b6 | a crop of the magazine page; it keeps the magazine's status (the owner claims no rights in it) |
 | `magazines/radio-1986-05/r86_wr.png` | [R86] (derived) | 404978 | 1e8f3bbee0c3e45080b25c426283d17fe4f9501bf9a9bb95b22c61d42d8b6ca6 | a crop of the magazine page; it keeps the magazine's status (the owner claims no rights in it) |
-| `schematics/kiselev-1.4/KiCad/Radio-86RK-Schematic-1.4.pdf` | [K14] | 838635 | 060a8ff2a066b09ce5ee36ac9fdca1219530f28d5f28a2ed6275b3f7ed336ab9 | CERN-OHL-S-2.0 |
 | `schematics/kiselev-1.4/netlist-extracted.txt` | [K14] (derived) | 15612 | 704e5a8db5e3863b09c1dd5f308ac2483682def7de0e6ffd2aadd493094e042b | CERN-OHL-S-2.0 (the owner's extraction) |
+| `sources/radio-86rk/Documentation/Intel - 8224 - Clock Generator.pdf` | [D8224] | 228195 | 93310c59e601354f9ba1de1c6f0625ba333c6e78d0145cc426be22cf1bb76b8e | vendor |
 | `sources/radio-86rk/Documentation/Radio_Magazine-Radio-86RK/Radio_Magazine-1986-04-page-24-Computer_Architecture.jpg` | [R86-4] | 1614256 | fd1d1236ed34b6753b49397d3999b6616501f97692f2957cb31fc905232e0e83 | magazine |
 | `sources/radio-86rk/Documentation/Radio_Magazine-Radio-86RK/Radio_Magazine-1986-04-page-25-Computer_Architecture.jpg` | [R86-4] | 1283295 | b8b1687ddcaa7af2087046b660daa2a0ad1941bcd2c092b2eb48394c26e1cdb9 | magazine |
 | `sources/radio-86rk/Documentation/Radio_Magazine-Radio-86RK/Radio_Magazine-1986-04-page-26-Computer_Architecture.jpg` | [R86-4] | 1380782 | 9cb7138b80c14b5b78f6688c12f703ba2f2b13e16747bb09c72846fdd58032a0 | magazine |
@@ -394,6 +393,7 @@ above.
 | `sources/radio-86rk/KiCad/Radio-86RK-IO.kicad_sch` | [K14] | 206261 | c55745f25320dde27cdefa02dd61817ed97a01da20ef61b1179bd1fb0c6ce2ad | CERN-OHL-S-2.0 |
 | `sources/radio-86rk/KiCad/Radio-86RK-Keyboard.kicad_sch` | [K14] | 214736 | 797f9714d659aac979560118cf841270f49583c1f94d67688a67b836f4ad5b1d | CERN-OHL-S-2.0 |
 | `sources/radio-86rk/KiCad/Radio-86RK-Power.kicad_sch` | [K14] | 197055 | 59a4a006febb97ac48c22e15fa48984f4730c4de337fe401efa2c607cab86eb7 | CERN-OHL-S-2.0 |
+| `sources/radio-86rk/KiCad/Radio-86RK-Schematic-1.4.pdf` | [K14] | 838783 | 2c0ffda9dd3d6f3ce728d91f4de853c6ea1021b977f8d5003953e02dc0af2e2e | CERN-OHL-S-2.0 |
 | `sources/radio-86rk/KiCad/Radio-86RK.kicad_sch` | [K14] | 316170 | bc43d48db84dcd35d120df84318a783464f743b2d6f9d8f89634e89eeef4023b | CERN-OHL-S-2.0 |
 | `sources/radio-86rk/Project_Notes.md` | [K14] | 5028 | 4e4396364621a26013389ca8dcf75d4d6c267f43d877b15df94c168d0ad0362e | GPL-3.0 |
 | `sources/radio-86rk/Radio-86RK_Publications.md` | [K14] | 16594 | dea2142794a688d71558c2768cd26442e29bf255402e25de02ebd8f3b3c1b10c | GPL-3.0 |

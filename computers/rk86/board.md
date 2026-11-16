@@ -19,8 +19,8 @@ material.
   КР580ВМ80А, ВТ57, ВВ55А). The architecture: Радио 1986 No. 4, pp. 24-26 [R86-4]. The PCB insert of
   Радио 1986 No. 6 [R86-6] (kept, not traced track by track).
 - Kiselev's board 1.4 [K14]: the Bill of Materials in `README.md` of skiselev/radio-86rk
-  (`sources/radio-86rk/README.md`, the submodule), `KiCad/Radio-86RK-Schematic-1.4.pdf` and the
-  nets of the KiCad sheets (`netlist-extracted.txt`).
+  (`sources/radio-86rk/README.md`, the submodule), `KiCad/Radio-86RK-Schematic-1.4.pdf` (also in
+  the submodule) and the nets of the KiCad sheets (`netlist-extracted.txt`).
 - Радио 1987 No. 5 [R87-5]: the КР580ВГ75 replacement article (not a source of 8275 behaviour; it
   confirms VSP to the font ROM enable and the DRAM refresh by the 8275's DMA).
 - Vendor data sheets of the board parts: [C78] (2708 4-40, PDF 232; 2716 4-46, PDF 238; 2116 3-109,
