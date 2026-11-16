@@ -29,3 +29,6 @@ Features, changes, fixes and known issues of each dated release (`vYYYY.MM.DD`).
   with the same hashes, and `tools/check_index.py` hashes them at the pinned commit. Kept here: the
   crops, the net list, and the schematic and 8224 PDFs with their metadata rewritten. The GPL-3.0
   text is no longer needed here.
+- The schematic PDF of Kiselev's rev. 1.4 [K14] and the 8224 data sheet [D8224] are no longer stored
+  (only our own documents here): the index reads the originals from the submodule
+  `sources/radio-86rk`, with their hashes as copied.
